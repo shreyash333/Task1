@@ -1,0 +1,29 @@
+MYSQL Queries
+
+CREATE SCHEMA TCS;
+
+CREATE SCHEMA TCS_Backup;
+
+CREATE TABLE Office(
+Office_ID int NOT NULL,
+Office_Name varchar(500) NOT NULL,
+Office_Address varchar(1000) NOT NULL,
+PRIMARY KEY (Office_ID)
+);
+
+CREATE TABLE Technology(
+Technology_ID int NOT NULL,
+Technology_Name varchar(500) NOT NULL,
+PRIMARY KEY (Technology_ID)
+);
+
+CREATE TABLE Employee (
+Employee_ID int NOT NULL,
+Name varchar(255) NOT NULL,
+Designation varchar(500) NOT NULL,
+Salary int NOT NULL,
+DOB DATE NOT NULL,     
+TechStack int NOT NULL,
+PRIMARY KEY (Employee_ID),
+FOREIGN KEY (TechStack) REFERENCES Technology(Technology_ID)
+);
