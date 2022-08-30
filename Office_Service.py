@@ -3,7 +3,6 @@ import DB
 
 
 def insert_Data(off_Name, off_Address):
-    print("")
     try:
         DB.mainDB_Cursor.execute("SELECT * from Office")
         result = DB.mainDB_Cursor.fetchall()
