@@ -15,13 +15,13 @@ def insert_Data(emp_Name, emp_Designation, emp_Salary, emp_DOB, emp_TechStack):
             DB_Service.mainDB_Cursor.execute(
                 'INSERT into Employee (Name, Designation, Salary, DOB, TechStack) values( "%s" , "%s", %d, "%s", %d)' % (emp_Name, emp_Designation, emp_Salary, emp_DOB, emp_TechStack))
             DB_Service.mysqldb.commit()
-            print('Record inserted successfully...')
+            print('\n\t*****Record inserted successfully.*****')
             log_message = ("Data inserted to Employee table")
             file_log.logInfo("Employee_Services.py",
                              "insert_Data", log_message)
     except (DB_Service.mysqldb.Error, DB_Service.mysqldb.Warning, TypeError, ValueError) as e:
         DB_Service.mysqldb.rollback()
-        print("Failed to insert record...")
+        print("\n\t*****Failed to insert record.*****")
         log_message = ("Failed to insert data in Employee table")
         file_log.logError("Employee_Services.py",
                           "insert_Data", log_message, e)
@@ -34,12 +34,12 @@ def update_Data(emp_ID, emp_Name, emp_Designation, emp_Salary, emp_DOB, emp_Tech
         DB_Service.mainDB_Cursor.execute('UPDATE Employee SET Name="%s",Designation="%s", Salary=%d, DOB="%s", TechStack=%d  WHERE Employee_ID=%d' % (
             emp_Name, emp_Designation, emp_Salary, emp_DOB, emp_TechStack, emp_ID))
         DB_Service.mysqldb.commit()
-        print('Record updated successfully...')
+        print('\n\t*****Record updated successfully.*****')
         log_message = ("Data updated in Employee table where ID=%d" % (emp_ID))
         file_log.logInfo("Employee_Services.py", "update_Data", log_message)
     except (DB_Service.mysqldb.Error, DB_Service.mysqldb.Warning, TypeError, ValueError) as e:
         DB_Service.mysqldb.rollback()
-        print("Failed to update record...")
+        print("\n\t*****Failed to update record.*****")
         log_message = (
             "Failed to update data in Employee table where ID=%d" % (emp_ID))
         file_log.logError("Employee_Services.py",

@@ -25,12 +25,12 @@ def backup_Data():
                 backupDB_Cursor.execute('DROP Table %s' % (table_name))
             backupDB_Cursor.execute(
                 f'CREATE TABLE {table_name} SELECT * FROM TCS.{table_name}')
-        print("Data Backup Successfully...")
+        print("\n\t*****Data Backup Successfully.*****")
         log_message = ("Data Backup completed successfully")
         file_log.logInfo("DB_Service.py",
                          "backup_Data", log_message)
     except (mysqldb1.Error, mysqldb1.Warning, TypeError, ValueError) as e:
-        print("Failed to Backup data...")
+        print("\n\t*****Failed to Backup data.*****")
         log_message = ("Failed to backup data")
         file_log.logError("DB_Service.py",
                           "backup_Data", log_message, e)
@@ -53,12 +53,12 @@ def recover_Data():
                 mainDB_Cursor.execute('DROP Table %s' % (table_name))
             mainDB_Cursor.execute(
                 f'CREATE TABLE {table_name} SELECT * FROM TCS_Backup.{table_name}')
-        print("Data Recovered Successfully...")
+        print("\n\t*****Data Recovered Successfully.*****")
         log_message = ("Data Recover completed successfully from backup")
         file_log.logInfo("DB_Service.py",
                          "recover_Data", log_message)
     except (mysqldb1.Error, mysqldb1.Warning, TypeError, ValueError) as e:
-        print("Failed to Recover data...")
+        print("\n\t*****Failed to Recover data.*****")
         log_message = ("Failed to recover data from backup")
         file_log.logError("DB_Service.py",
                           "recover_Data", log_message, e)
