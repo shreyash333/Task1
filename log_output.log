@@ -26,3 +26,4 @@ INFO:root:2022-08-31 11:44:41.AM  File : DB_Service.py  Function : backup_Data  
 INFO:root:2022-08-31 11:44:59.AM  File : Common_Services.py  Function : delete_Data  Message: Data Deleted from Employee table where ID=1 
 INFO:root:2022-08-31 11:45:19.AM  File : DB_Service.py  Function : recover_Data  Message: Data Recover completed successfully from backup
 INFO:root:2022-08-31 11:59:33.AM  File : Employee_Services.py  Function : insert_Data  Message: Data inserted to Employee table
+INFO:root:2022-08-31 12:02:23.PM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Employee table
