@@ -1,0 +1,27 @@
+INFO:root:2022-08-31 11:32:36.AM  File : DB_Service.py  Function : recover_Data  Message: Data Recover completed successfully from backup
+INFO:root:2022-08-31 11:37:41.AM  File : Technology_Services.py  Function : insert_Data  Message: Data inserted to Technology table
+INFO:root:2022-08-31 11:37:47.AM  File : Technology_Services.py  Function : insert_Data  Message: Data inserted to Technology table
+INFO:root:2022-08-31 11:38:00.AM  File : Technology_Services.py  Function : insert_Data  Message: Data inserted to Technology table
+INFO:root:2022-08-31 11:38:12.AM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Technology table
+INFO:root:2022-08-31 11:38:44.AM  File : Technology_Services.py  Function : update_Data  Message: Data updated in Technology table where ID=3
+INFO:root:2022-08-31 11:39:09.AM  File : Common_Services.py  Function : delete_Data  Message: Data Deleted from Technology table where ID=2 
+INFO:root:2022-08-31 11:39:20.AM  File : Common_Services.py  Function : view_Data  Message: Data readed from Technology table where ID=1 
+INFO:root:2022-08-31 11:40:11.AM  File : Office_Services.py  Function : insert_Data  Message: Data inserted to Office table
+INFO:root:2022-08-31 11:40:18.AM  File : Office_Services.py  Function : insert_Data  Message: Data inserted to Office table
+INFO:root:2022-08-31 11:40:44.AM  File : Office_Services.py  Function : insert_Data  Message: Data inserted to Office table
+INFO:root:2022-08-31 11:40:49.AM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Office table
+INFO:root:2022-08-31 11:41:19.AM  File : Office_Services.py  Function : update_Data  Message: Data updated in Office table where ID=2
+INFO:root:2022-08-31 11:41:27.AM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Office table
+INFO:root:2022-08-31 11:41:47.AM  File : Common_Services.py  Function : delete_Data  Message: Data Deleted from Office table where ID=2 
+INFO:root:2022-08-31 11:41:53.AM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Office table
+INFO:root:2022-08-31 11:42:00.AM  File : Common_Services.py  Function : view_Data  Message: Data readed from Office table where ID=1 
+INFO:root:2022-08-31 11:42:58.AM  File : Employee_Services.py  Function : insert_Data  Message: Data inserted to Employee table
+INFO:root:2022-08-31 11:43:08.AM  File : Employee_Services.py  Function : insert_Data  Message: Data inserted to Employee table
+INFO:root:2022-08-31 11:43:15.AM  File : Employee_Services.py  Function : insert_Data  Message: Data inserted to Employee table
+INFO:root:2022-08-31 11:44:08.AM  File : Employee_Services.py  Function : update_Data  Message: Data updated in Employee table where ID=2
+INFO:root:2022-08-31 11:44:13.AM  File : Common_Services.py  Function : view_All_Data  Message: Data readed from Employee table
+INFO:root:2022-08-31 11:44:26.AM  File : Common_Services.py  Function : delete_Data  Message: Data Deleted from Employee table where ID=3 
+INFO:root:2022-08-31 11:44:35.AM  File : Common_Services.py  Function : view_Data  Message: Data readed from Employee table where ID=2 
+INFO:root:2022-08-31 11:44:41.AM  File : DB_Service.py  Function : backup_Data  Message: Data Backup completed successfully
+INFO:root:2022-08-31 11:44:59.AM  File : Common_Services.py  Function : delete_Data  Message: Data Deleted from Employee table where ID=1 
+INFO:root:2022-08-31 11:45:19.AM  File : DB_Service.py  Function : recover_Data  Message: Data Recover completed successfully from backup

@@ -1,29 +1,41 @@
 
-import DB
+import DB_Service
+import file_log
 
 
 def insert_Data(tech_Name):
     try:
-        DB.mainDB_Cursor.execute("SELECT * from Technology")
-        result = DB.mainDB_Cursor.fetchall()
-        tech_ID = len(result)+1
-        DB.mainDB_Cursor.execute(
-            'INSERT into Technology values(%d, "%s")' % (tech_ID, tech_Name))
-        DB.mysqldb.commit()
+        DB_Service.mainDB_Cursor.execute(
+            'INSERT into Technology (Technology_Name) values( "%s")' % (tech_Name))
+        DB_Service.mysqldb.commit()
         print('Record inserted successfully...')
-    except:
+        log_message = ("Data inserted to Technology table")
+        file_log.logInfo("Technology_Services.py", "insert_Data", log_message)
+    except (DB_Service.mysqldb.Error, DB_Service.mysqldb.Warning, TypeError, ValueError) as e:
+        DB_Service.mysqldb.rollback()
         print("Failed to insert record...")
-    DB.mysqldb.close()
+        log_message = ("Failed to insert data in Technology table")
+        file_log.logError("Technology_Services.py",
+                          "insert_Data", log_message, e)
+    DB_Service.mysqldb.close()
     return True
 
 
 def update_Data(tech_ID, tech_Name):
     try:
-        DB.mainDB_Cursor.execute('UPDATE Technology SET Technology_Name="%s"  WHERE Technology_ID=%d' % (
+        DB_Service.mainDB_Cursor.execute('UPDATE Technology SET Technology_Name="%s"  WHERE Technology_ID=%d' % (
             tech_Name, tech_ID))
-        DB.mysqldb.commit()
+        DB_Service.mysqldb.commit()
         print('Record updated successfully...')
-    except:
+        log_message = (
+            "Data updated in Technology table where ID=%d" % (tech_ID))
+        file_log.logInfo("Technology_Services.py", "update_Data", log_message)
+    except (DB_Service.mysqldb.Error, DB_Service.mysqldb.Warning, TypeError, ValueError) as e:
+        DB_Service.mysqldb.rollback()
         print("Failed to update record...")
-    DB.mysqldb.close()
+        log_message = (
+            "Failed to update data in Technology table where ID=%d" % (tech_ID))
+        file_log.logError("Technology_Services.py",
+                          "update_Data", log_message, e)
+    DB_Service.mysqldb.close()
     return True

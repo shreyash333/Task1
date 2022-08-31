@@ -1,7 +1,7 @@
 import Common_Service
 import Office_Service
 import Employee_Service
-import DB
+import DB_Service
 import Technology_Service
 
 
@@ -133,8 +133,8 @@ elif m == 2:
 elif m == 3:
     technology_functions()
 elif m == 4:
-    DB.backup_Data()
+    DB_Service.backup_Data()
 elif m == 5:
-    DB.recover_Data()
+    DB_Service.recover_Data()
 else:
     print("Invalid Input")
