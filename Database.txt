@@ -5,20 +5,20 @@ CREATE SCHEMA TCS;
 CREATE SCHEMA TCS_Backup;
 
 CREATE TABLE Office(
-Office_ID int NOT NULL,
+Office_ID int NOT NULL auto_increment,
 Office_Name varchar(500) NOT NULL,
 Office_Address varchar(1000) NOT NULL,
 PRIMARY KEY (Office_ID)
 );
 
 CREATE TABLE Technology(
-Technology_ID int NOT NULL,
+Technology_ID int NOT NULL auto_increment,
 Technology_Name varchar(500) NOT NULL,
 PRIMARY KEY (Technology_ID)
 );
 
 CREATE TABLE Employee (
-Employee_ID int NOT NULL,
+Employee_ID int NOT NULL auto_increment,
 Name varchar(255) NOT NULL,
 Designation varchar(500) NOT NULL,
 Salary int NOT NULL,
